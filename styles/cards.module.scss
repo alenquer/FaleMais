@@ -1,0 +1,89 @@
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 32rem;
+}
+
+.card {
+  cursor: pointer;
+  display: flex;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 11;
+  height: 14rem;
+  width: 12rem;
+  margin: 1rem;
+  border-radius: 0.75rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+@keyframes oddPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: translate(0, 15px);
+  }
+}
+
+@keyframes evenPulse {
+  0% {
+    transform: translate(0, -50px);
+  }
+
+  100% {
+    transform: translate(0, -25px);
+  }
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: white;
+  background-color: var(--secondary);
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 0.75rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.icon {
+  align-self: center;
+  margin: 1rem;
+  color: var(--primary);
+}
+
+@media screen and (min-width: 450px) {
+  .grid {
+    margin: 4rem 0;
+  }
+  .card:nth-child(odd) {
+    animation-name: oddPulse;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+
+  .card:nth-child(even) {
+    animation-name: evenPulse;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+}

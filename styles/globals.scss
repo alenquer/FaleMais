@@ -1,0 +1,48 @@
+html,
+body,
+#container {
+  max-height: 100vh;
+  max-width: 100vw;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth !important;
+}
+
+td,
+th {
+  border: 1px solid #eee;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+td {
+  color: grey;
+}
+
+table {
+  border-collapse: collapse;
+  background: hsla(0, 0%, 100%, 0.4);
+}
+
+tr {
+  margin: 5px;
+}
+
+:root {
+  --primary: #5cb1ff;
+  --secondary: #0070f3;
+  --contrast: #e8265e;
+}
